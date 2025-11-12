@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class", theme: { extend: {} } };
+    </script>
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <title>Codalyze — Contact Codalyze</title>
+  </head>
+  <body
+    class="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors"
+  >
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:ring rounded bg-white dark:bg-slate-800"
+      >Skip to content</a
+    >
+
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="h-14 flex items-center justify-between">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 font-semibold tracking-wide"
+          >
+            <img src="assets/logo.svg" alt="" class="h-7 w-7" />
+            <span>Codalyze</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="pricing.html">Pricing</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="signin.html">Sign In</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-2">
+            <button
+              id="decrease-font"
+              class="icon-btn"
+              title="Decrease font size"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <button
+              id="increase-font"
+              class="icon-btn"
+              title="Increase font size"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+            <button
+              id="theme-toggle"
+              class="icon-btn"
+              title="Toggle dark mode"
+              aria-pressed="false"
+              aria-label="Toggle dark mode"
+            >
+              <span id="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="md:hidden icon-btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-200 dark:border-slate-800"
+      >
+        <nav
+          class="px-4 py-3 grid grid-cols-2 gap-2 text-sm"
+          aria-label="Mobile"
+        >
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="signin.html">Sign In</a>
+        </nav>
+        <div class="px-4 pb-4 flex items-center gap-2">
+          <button
+            id="decrease-font-m"
+            class="icon-btn"
+            aria-label="Decrease font size"
+          >
+            A-
+          </button>
+          <button
+            id="increase-font-m"
+            class="icon-btn"
+            aria-label="Increase font size"
+          >
+            A+
+          </button>
+          <button
+            id="theme-toggle-m"
+            class="icon-btn"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+      <section
+        class="min-h-[40vh] rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 p-6 flex items-center justify-center"
+      >
+        <div class="text-center opacity-60">
+          <h1 class="text-2xl font-semibold">Contact Codalyze</h1>
+          <p class="mt-2 text-sm">Blank workspace — add your content here.</p>
+        </div>
+        <section class="max-w-xl mx-auto">
+          <form id="checkout-form" class="space-y-4" aria-describedby="cc-help">
+            <p id="cc-help" class="text-sm opacity-70">
+              Simulated card check (Luhn only). No real payment.
+            </p>
+            <div>
+              <label for="cc-number" class="block text-sm mb-1"
+                >Credit Card Number</label
+              >
+              <input
+                id="cc-number"
+                name="cc-number"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                class="w-full border rounded-xl px-3 py-2 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
+                placeholder="0000 0000 0000 0000"
+                aria-describedby="cc-help"
+              />
+            </div>
+            <button type="submit" class="btn primary">Validate</button>
+            <p
+              id="cc-result"
+              class="text-sm mt-2 opacity-80"
+              aria-live="polite"
+            ></p>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="mt-16 border-t border-slate-200 dark:border-slate-800">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm flex flex-col gap-3 md:flex-row md:items-center md:justify-between"
+      >
+        <div>&copy; <span id="year"></span> Codalyze</div>
+        <div class="flex flex-wrap gap-4">
+          <a class="nav-link" href="pricing.html">Subscribe</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

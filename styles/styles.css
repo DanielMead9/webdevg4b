@@ -1,0 +1,43 @@
+:root {
+  --base-font-size: 16px;
+}
+html {
+  font-size: var(--base-font-size);
+}
+body {
+  line-height: 1.5;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+}
+.nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.icon-btn,
+.btn {
+  border: 1px solid rgba(100, 116, 139, 0.4);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  background: transparent;
+}
+.icon-btn:hover {
+  background: rgba(148, 163, 184, 0.08);
+}
+.btn.primary {
+  background: rgb(2, 132, 199);
+  color: white;
+  border-color: rgb(2, 132, 199);
+}
+.btn.primary:hover {
+  background: rgb(3, 105, 161);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(59 130 246);
+  outline-offset: 2px;
+}
