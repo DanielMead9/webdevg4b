@@ -119,12 +119,166 @@
     </header>
 
     <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <section
-        class="min-h-[40vh] rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 p-6 flex items-center justify-center"
-      >
-        <div class="text-center opacity-60">
-          <h1 class="text-2xl font-semibold">About Codalyze</h1>
-          <p class="mt-2 text-sm">Blank workspace — add your content here.</p>
+      <section class="space-y-10">
+        <!-- Hero Intro -->
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-3xl font-bold mb-4">About Codalyze</h1>
+          <p class="text-lg text-slate-600 dark:text-slate-400">
+            At <strong>Codalyze</strong>, we believe great code builds great
+            products. Our mission is to make code reviews faster, smarter, and
+            more accessible for every developer — from solo coders to large
+            teams.
+          </p>
+        </div>
+
+        <!-- Mission and Story -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-2xl font-semibold mb-3">Our Mission</h2>
+            <p class="leading-relaxed text-slate-700 dark:text-slate-300">
+              Codalyze was founded with a simple idea —
+              <em
+                >clean, efficient code should be the standard, not a
+                challenge.</em
+              >
+              We combine intelligent automation with expert insights to help
+              developers spot issues, improve performance, and deliver
+              higher-quality software faster.
+            </p>
+          </div>
+          <!-- Image sources: https://undraw.co/ -->
+          <img
+            src="/assets/undraw_code-review_jdgp.svg"
+            alt="Team collaborating on code review"
+            class="rounded-xl shadow-md max-h-64 w-auto mx-auto"
+          />
+        </div>
+
+        <!-- What We Do -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <img
+            src="/assets/undraw_ai-agent_pdkp.svg"
+            alt="AI reviewing code"
+            class="rounded-xl shadow-md order-2 md:order-1 max-h-64 w-auto mx-auto"
+          />
+          <div class="order-1 md:order-2">
+            <h2 class="text-2xl font-semibold mb-3">What We Do</h2>
+            <p class="leading-relaxed text-slate-700 dark:text-slate-300">
+              Our platform analyzes your repositories with advanced AI tools and
+              provides clear, actionable recommendations. Whether it's code
+              efficiency, readability, or security, we make sure every review
+              helps your code evolve toward excellence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <div class="text-center max-w-4xl mx-auto mt-10">
+          <h2 class="text-2xl font-semibold mb-4">Our Core Values</h2>
+          <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+            <li
+              class="p-4 rounded-xl border border-slate-200 dark:border-slate-700"
+            >
+              <h3 class="font-semibold mb-1">Quality</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Every review aims to make your code cleaner, faster, and more
+                reliable.
+              </p>
+            </li>
+            <li
+              class="p-4 rounded-xl border border-slate-200 dark:border-slate-700"
+            >
+              <h3 class="font-semibold mb-1">Transparency</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                We explain every suggestion — no vague metrics or black-box
+                results.
+              </p>
+            </li>
+            <li
+              class="p-4 rounded-xl border border-slate-200 dark:border-slate-700"
+            >
+              <h3 class="font-semibold mb-1">Innovation</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                We constantly evolve our tools to stay ahead in the world of
+                code review.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Meet the Team -->
+        <div class="text-center max-w-4xl mx-auto mt-10">
+          <h2 class="text-2xl font-semibold mb-4">Meet the Team</h2>
+
+          <!-- TODO: Insert team photo -->
+          <div class="flex justify-center mb-10">
+            <img
+              src="/assets/team_photo_placeholder.png"
+              alt="Codalyze Team Photo"
+              class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-md max-w-[80%] h-auto"
+            />
+          </div>
+
+          <!-- Team Member Cards -->
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="p-6 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:shadow-md transition"
+            >
+              <h3 class="text-lg font-semibold">Person 1</h3>
+              <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                Chief Everything Officer
+              </p>
+              <p class="text-slate-700 dark:text-slate-300 mt-2">
+                Oversees all aspects of Codalyze — from architecture design to
+                product vision. Passionate about building tools that empower
+                developers to write better code.
+              </p>
+            </div>
+
+            <div
+              class="p-6 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:shadow-md transition"
+            >
+              <h3 class="text-lg font-semibold">Person 2</h3>
+              <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                Lead Product Engineer
+              </p>
+              <p class="text-slate-700 dark:text-slate-300 mt-2">
+                Designs and implements key features in our AI-powered review
+                system. Blends creativity and precision to make code analysis
+                fast and insightful.
+              </p>
+            </div>
+
+            <div
+              class="p-6 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:shadow-md transition"
+            >
+              <h3 class="text-lg font-semibold">Person 3</h3>
+              <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                Operations & UX Specialist
+              </p>
+              <p class="text-slate-700 dark:text-slate-300 mt-2">
+                Handles design systems, user experience, and team
+                communications. Ensures Codalyze remains smooth, accessible, and
+                developer-friendly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing Note -->
+        <div class="text-center mt-12">
+          <h2 class="text-xl font-semibold mb-2">
+            The Future of Code Review Starts Here
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400">
+            Join us in redefining how developers write, review, and refine code.
+          </p>
+          <a
+            href="pricing.html"
+            class="inline-block mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+          >
+            Get Started
+          </a>
         </div>
       </section>
     </main>
