@@ -118,15 +118,114 @@
       </div>
     </header>
 
-    <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <section
-        class="min-h-[40vh] rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 p-6 flex items-center justify-center"
-      >
-        <div class="text-center opacity-60">
-          <h1 class="text-2xl font-semibold">Pricing</h1>
-          <p class="mt-2 text-sm">Blank workspace — add your content here.</p>
+    <main id="main" class="max-w-10xl mx-auto px-4 sm:px-6 py-10">
+      <h1 class="text-3xl font-bold text-center mb-8">Choose Your Plan</h1>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Starter Tier -->
+        <div
+          class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md text-center flex flex-col justify-between hover:shadow-lg transition"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold mb-2">Starter</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              For students or beginners
+            </p>
+            <p class="text-4xl font-bold mb-6">
+              $0<span class="text-lg font-medium text-gray-500">/mo</span>
+            </p>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 mb-6">
+              <li>✔ 1 small file per review</li>
+              <li>✔ Basic syntax feedback</li>
+              <li>✔ Automated AI review only</li>
+              <li>✔ 48–72 hr turnaround</li>
+            </ul>
+          </div>
+          <a
+            href="payment.html?plan=Starter&price=0"
+            class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+            >Buy Now</a
+          >
         </div>
-      </section>
+
+        <!-- Developer Tier -->
+        <div
+          class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md text-center flex flex-col justify-between hover:shadow-lg transition"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold mb-2">Developer</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              For freelancers & coders
+            </p>
+            <p class="text-4xl font-bold mb-6">
+              $29<span class="text-lg font-medium text-gray-500">/mo</span>
+            </p>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 mb-6">
+              <li>✔ Up to 500 lines per review</li>
+              <li>✔ AI + human feedback</li>
+              <li>✔ 1 follow-up submission</li>
+              <li>✔ 24–48 hr turnaround</li>
+            </ul>
+          </div>
+          <a
+            href="payment.html?plan=Developer&price=29"
+            class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+            >Buy Now</a
+          >
+        </div>
+
+        <!-- Pro Tier -->
+        <div
+          class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md text-center flex flex-col justify-between border-2 border-blue-600 hover:shadow-xl transition"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold mb-2">Pro</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              For serious developers & teams
+            </p>
+            <p class="text-4xl font-bold mb-6">
+              $79<span class="text-lg font-medium text-gray-500">/mo</span>
+            </p>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 mb-6">
+              <li>✔ Up to 2000 lines per review</li>
+              <li>✔ Full human + AI analysis</li>
+              <li>✔ Private Slack feedback</li>
+              <li>✔ 12–24 hr turnaround</li>
+            </ul>
+          </div>
+          <a
+            href="payment.html?plan=Pro&price=79"
+            class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+            >Buy Now</a
+          >
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div
+          class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md text-center flex flex-col justify-between hover:shadow-lg transition"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold mb-2">Enterprise</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              For startups & organizations
+            </p>
+            <p class="text-4xl font-bold mb-6">
+              $249<span class="text-lg font-medium text-gray-500">/mo</span>
+            </p>
+            <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-2 mb-6">
+              <li>✔ Unlimited reviews</li>
+              <li>✔ Dedicated reviewer</li>
+              <li>✔ GitHub / GitLab integration</li>
+              <li>✔ 24/7 priority support</li>
+            </ul>
+          </div>
+          <a
+            href="payment.html?plan=Enterprise&price=249"
+            class="inline-block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+            >Buy Now</a
+          >
+        </div>
+      </div>
     </main>
 
     <footer class="mt-16 border-t border-slate-200 dark:border-slate-800">
