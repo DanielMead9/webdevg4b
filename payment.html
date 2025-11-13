@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class", theme: { extend: {} } };
+    </script>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body
+    class="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors"
+  >
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="h-14 flex items-center justify-between">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 font-semibold tracking-wide"
+          >
+            <img src="assets/logo.svg" alt="" class="h-7 w-7" />
+            <span>Codalyze</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="pricing.html">Pricing</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="signin.html">Sign In</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-2">
+            <button
+              id="decrease-font"
+              class="icon-btn"
+              title="Decrease font size"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <button
+              id="increase-font"
+              class="icon-btn"
+              title="Increase font size"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+            <button
+              id="theme-toggle"
+              class="icon-btn"
+              title="Toggle dark mode"
+              aria-pressed="false"
+              aria-label="Toggle dark mode"
+            >
+              <span id="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="md:hidden icon-btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-200 dark:border-slate-800"
+      >
+        <nav
+          class="px-4 py-3 grid grid-cols-2 gap-2 text-sm"
+          aria-label="Mobile"
+        >
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="signin.html">Sign In</a>
+        </nav>
+        <div class="px-4 pb-4 flex items-center gap-2">
+          <button
+            id="decrease-font-m"
+            class="icon-btn"
+            aria-label="Decrease font size"
+          >
+            A-
+          </button>
+          <button
+            id="increase-font-m"
+            class="icon-btn"
+            aria-label="Increase font size"
+          >
+            A+
+          </button>
+          <button
+            id="theme-toggle-m"
+            class="icon-btn"
+            aria-label="Toggle dark mode"
+          >
+            🌙
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="min-h-screen flex items-center justify-center p-6">
+      <div
+        class="max-w-5xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden"
+      >
+        <div class="grid md:grid-cols-2">
+          <!-- ADD CARD SECTION -->
+          <div class="p-8 border-r border-gray-200 dark:border-gray-700">
+            <h2 class="text-2xl font-bold mb-6">Add Payment Method</h2>
+
+            <form id="paymentForm" class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium mb-1"
+                  >Name on Card</label
+                >
+                <input
+                  type="text"
+                  id="cardName"
+                  required
+                  class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-indigo-500 outline-none"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium mb-1"
+                  >Card Number</label
+                >
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="cardNumber"
+                    maxlength="19"
+                    placeholder="1234 5678 9012 3456"
+                    required
+                    class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-indigo-500 outline-none"
+                  />
+
+                  <!-- CARD BRAND ICON -->
+                  <img
+                    id="cardBrandIcon"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 h-6 opacity-0 transition-opacity"
+                  />
+                </div>
+              </div>
+
+              <div class="flex space-x-4">
+                <div class="flex-1">
+                  <label class="block text-sm font-medium mb-1"
+                    >Expiry (MM/YY)</label
+                  >
+                  <input
+                    type="text"
+                    id="expiry"
+                    maxlength="5"
+                    placeholder="04/27"
+                    required
+                    class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-indigo-500 outline-none"
+                  />
+                </div>
+                <div class="flex-1">
+                  <label class="block text-sm font-medium mb-1">CVV</label>
+                  <input
+                    type="password"
+                    id="cvv"
+                    maxlength="4"
+                    placeholder="123"
+                    required
+                    class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-indigo-500 outline-none"
+                  />
+                </div>
+              </div>
+
+              <button
+                id="payBtn"
+                type="submit"
+                class="w-full mt-6 bg-indigo-600 hover:bg-indigo-500 text-white py-3 rounded-lg font-semibold"
+              >
+                Pay Now
+              </button>
+            </form>
+
+            <p id="paymentMessage" class="mt-4 text-sm font-medium"></p>
+          </div>
+
+          <!-- PAYMENT REVIEW SECTION -->
+          <div class="p-8 bg-gray-50 dark:bg-gray-700">
+            <h2 class="text-2xl font-bold mb-6">Payment Review</h2>
+
+            <div class="space-y-4">
+              <div class="flex justify-between">
+                <span>Plan:</span>
+                <span id="planName" class="font-semibold">DevPilot Pro</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Duration:</span>
+                <span class="font-semibold">Monthly</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Subtotal:</span>
+                <span id="subtotal">$29.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Tax:</span>
+                <span id="tax">$2.61</span>
+              </div>
+              <hr class="border-gray-300 dark:border-gray-600" />
+              <div class="flex justify-between text-lg font-bold">
+                <span>Total:</span>
+                <span id="total">$31.61</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/payment.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
