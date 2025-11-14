@@ -119,40 +119,124 @@
     </header>
 
     <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <section
-        class="min-h-[40vh] rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 p-6 flex items-center justify-center"
-      >
-        <div class="text-center opacity-60">
-          <h1 class="text-2xl font-semibold">Contact Codalyze</h1>
-          <p class="mt-2 text-sm">Blank workspace — add your content here.</p>
+      <section class="space-y-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-3xl font-bold mb-4">Contact Codalyze</h1>
+          <p class="text-lg text-slate-600 dark:text-slate-400">
+            Have a question, feedback, or want to partner with us? Send a
+            message using the form or reach out via phone or email. We'll get
+            back to you as soon as we can.
+          </p>
         </div>
-        <section class="max-w-xl mx-auto">
-          <form id="checkout-form" class="space-y-4" aria-describedby="cc-help">
-            <p id="cc-help" class="text-sm opacity-70">
-              Simulated card check (Luhn only). No real payment.
+
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="space-y-6">
+            <h2 class="text-2xl font-semibold">Get in touch</h2>
+            <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+              Our team is available Monday to Friday. For urgent issues, call us
+              — otherwise please use the form and we'll respond within 1-2
+              business days.
             </p>
-            <div>
-              <label for="cc-number" class="block text-sm mb-1"
-                >Credit Card Number</label
-              >
-              <input
-                id="cc-number"
-                name="cc-number"
-                inputmode="numeric"
-                autocomplete="cc-number"
-                class="w-full border rounded-xl px-3 py-2 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
-                placeholder="0000 0000 0000 0000"
-                aria-describedby="cc-help"
-              />
-            </div>
-            <button type="submit" class="btn primary">Validate</button>
-            <p
-              id="cc-result"
-              class="text-sm mt-2 opacity-80"
-              aria-live="polite"
-            ></p>
-          </form>
-        </section>
+
+            <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+              <li>
+                <strong>Address:</strong> 1234 Code Street, Suite 500, San
+                Francisco, CA 94107
+              </li>
+              <li>
+                <strong>Phone:</strong>
+                <a
+                  href="tel:+14155552671"
+                  class="text-indigo-600 dark:text-indigo-400"
+                  >+1 (415) 555-2671</a
+                >
+              </li>
+              <li>
+                <strong>Email:</strong>
+                <a
+                  href="mailto:info@codalyze.example"
+                  class="text-indigo-600 dark:text-indigo-400"
+                  >info@codalyze.example</a
+                >
+              </li>
+              <li><strong>Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM ET</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold mb-3">Send us a message</h2>
+            <p><span class="text-red-500">*</span> Required fields</p>
+            <form
+              id="contact-form"
+              class="space-y-4"
+              aria-describedby="contact-help"
+              action="#"
+              method="post"
+            >
+              <div>
+                <label for="name" class="block text-sm mb-1"
+                  >Name <span class="text-red-500">*</span></label
+                >
+                <input
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  class="w-full border rounded-xl px-3 py-2 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm mb-1"
+                  >Email <span class="text-red-500">*</span></label
+                >
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="Your email address"
+                  class="w-full border rounded-xl px-3 py-2 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm mb-1"
+                  >Subject <span class="text-red-500">*</span></label
+                >
+                <input
+                  id="subject"
+                  name="subject"
+                  placeholder="How can we help?"
+                  class="w-full border rounded-xl px-3 py-2 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm mb-1"
+                  >Message <span class="text-red-500">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us about your question or project..."
+                  class="w-full border rounded-xl px-3 py-2 bg-white dark:bg-slate-800 border-slate-300 dark:border-slate-700"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn primary">Send Message</button>
+              <p
+                id="contact-result"
+                class="text-sm mt-2 opacity-80"
+                aria-live="polite"
+              ></p>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
