@@ -75,6 +75,8 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
   message.textContent = "✅ Payment Successful! Redirecting...";
   message.className = "mt-4 text-green-500 font-semibold";
 
+  localStorage.setItem("paymentApproved", "true");
+
   // Clear form
   document.getElementById("paymentForm").reset();
   cardBrandIcon.style.opacity = "0"; // Hide card logo too
