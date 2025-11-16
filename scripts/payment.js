@@ -72,16 +72,17 @@ document.getElementById("paymentForm").addEventListener("submit", function (e) {
     return;
   }
 
-  // --- APPROVED ---
-  // --- APPROVED ---
-  message.textContent = "✅ Payment Approved!";
+  message.textContent = "✅ Payment Successful! Redirecting...";
   message.className = "mt-4 text-green-500 font-semibold";
 
-  // Clear form after a short delay
+  // Clear form
+  document.getElementById("paymentForm").reset();
+  cardBrandIcon.style.opacity = "0"; // Hide card logo too
+
+  // Redirect after short pause
   setTimeout(() => {
-    document.getElementById("paymentForm").reset();
-    cardNumberInput.value = ""; // also clear formatted card number box
-  }, 800);
+    window.location.href = "success.html";
+  }, 1200);
 });
 
 // --- Luhn Algorithm ---
