@@ -41,3 +41,12 @@ body {
   outline: 2px solid rgb(59 130 246);
   outline-offset: 2px;
 }
+
+.dark .success {
+  background-color: #1f2937; /* gray-800 */
+  color: #e5e7eb;
+}
+
+.dark .success p {
+  color: #e5e7eb;
+}
