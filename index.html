@@ -5,142 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Tailwind Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: "class", theme: { extend: {} } };
-    </script>
-    <link rel="stylesheet" href="styles/styles.css" />
-
+    <script>tailwind.config = { darkMode: "class", theme: { extend: {} } };</script>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
     <title>Codalyze — Home</title>
   </head>
-  <body
-    class="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors"
-  >
-    <a
-      href="#main"
-      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:ring rounded bg-white dark:bg-slate-800"
-      >Skip to content</a
-    >
 
-    <header
-      class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur"
-    >
+  <body class="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:ring rounded bg-white dark:bg-slate-800">Skip to content</a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="h-14 flex items-center justify-between">
-          <a
-            href="index.html"
-            class="flex items-center gap-2 font-semibold tracking-wide"
-          >
-            <img src="assets/logo.svg" alt="" class="h-7 w-7" />
+          <a href="/index.html" class="flex items-center gap-2 font-semibold tracking-wide">
+            <img src="/assets/icon.svg" alt="Codalyze logo" class="h-7 w-7" />
             <span>Codalyze</span>
           </a>
           <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="pricing.html">Pricing</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-
+            <a class="nav-link" href="/index.html">Home</a>
+            <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="/pricing.html">Pricing</a>
+            <a class="nav-link" href="/testimonials.html">Testimonials</a>
+            <a class="nav-link" href="/contact.html">Contact</a>
           </nav>
+
           <div class="hidden md:flex items-center gap-2">
-            <button
-              id="decrease-font"
-              class="icon-btn"
-              title="Decrease font size"
-              aria-label="Decrease font size"
-            >
-              A-
-            </button>
-            <button
-              id="increase-font"
-              class="icon-btn"
-              title="Increase font size"
-              aria-label="Increase font size"
-            >
-              A+
-            </button>
-            <button
-              id="theme-toggle"
-              class="icon-btn"
-              title="Toggle dark mode"
-              aria-pressed="false"
-              aria-label="Toggle dark mode"
-            >
+            <button id="decrease-font" class="icon-btn" title="Decrease font size" aria-label="Decrease font size">A-</button>
+            <button id="increase-font" class="icon-btn" title="Increase font size" aria-label="Increase font size">A+</button>
+            <button id="theme-toggle" class="icon-btn" title="Toggle dark mode" aria-pressed="false" aria-label="Toggle dark mode">
               <span id="theme-icon" aria-hidden="true">🌙</span>
             </button>
           </div>
-          <button
-            id="menu-toggle"
-            class="md:hidden icon-btn"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            aria-label="Open menu"
-          >
-            ☰
-          </button>
+          <button id="menu-toggle" class="md:hidden icon-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
         </div>
       </div>
-      <div
-        id="mobile-menu"
-        class="md:hidden hidden border-t border-slate-200 dark:border-slate-800"
-      >
-        <nav
-          class="px-4 py-3 grid grid-cols-2 gap-2 text-sm"
-          aria-label="Mobile"
-        >
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="pricing.html">Pricing</a>
-          <a class="nav-link" href="contact.html">Contact</a>
 
+      <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+        <nav class="px-4 py-3 grid grid-cols-2 gap-2 text-sm" aria-label="Mobile">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/pricing.html">Pricing</a>
+          <a class="nav-link" href="/testimonials.html">Testimonials</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
         </nav>
         <div class="px-4 pb-4 flex items-center gap-2">
-          <button
-            id="decrease-font-m"
-            class="icon-btn"
-            aria-label="Decrease font size"
-          >
-            A-
-          </button>
-          <button
-            id="increase-font-m"
-            class="icon-btn"
-            aria-label="Increase font size"
-          >
-            A+
-          </button>
-          <button
-            id="theme-toggle-m"
-            class="icon-btn"
-            aria-label="Toggle dark mode"
-          >
-            🌙
-          </button>
+          <button id="decrease-font-m" class="icon-btn" aria-label="Decrease font size">A-</button>
+          <button id="increase-font-m" class="icon-btn" aria-label="Increase font size">A+</button>
+          <button id="theme-toggle-m" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
         </div>
       </div>
     </header>
 
-    <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      <section
-        class="min-h-[40vh] rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 p-6 flex items-center justify-center"
-      >
-        <div class="text-center opacity-60">
-          <h1 class="text-2xl font-semibold">Home</h1>
-          <p class="mt-2 text-sm">Blank workspace — add your content here.</p>
+    <!-- Main -->
+    <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <!-- Hero -->
+      <section class="text-center">
+        <div class="mx-auto max-w-3xl">
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+            AI Code Reviews you can trust.
+          </h1>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            Codalyze spots bugs, performance bottlenecks, and style issues — then suggests clean fixes and commit-ready patches.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="/pricing.html" class="btn primary">View Plans</a>
+            <a href="/testimonials.html" class="btn">See Testimonials</a>
+          </div>
+        </div>
+
+        <!-- Hero illustration -->
+        <div class="mt-10 flex justify-center">
+          <img
+            src="/assets/undraw_ai-agent_pdkp.svg"
+            alt="AI agent illustration"
+            class="w-full max-w-md h-auto"
+          />
+        </div>
+
+        <!-- Mini trust row -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 opacity-70">
+          <div class="border rounded-xl p-3 text-sm">Security-first</div>
+          <div class="border rounded-xl p-3 text-sm">GitHub/GitLab ready</div>
+          <div class="border rounded-xl p-3 text-sm">Human + AI review</div>
+          <div class="border rounded-xl p-3 text-sm">Actionable diffs</div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="mt-16">
+        <h2 class="text-2xl font-bold text-center mb-8">Why developers pick Codalyze</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-semibold mb-2">Catch issues earlier</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Surface logic errors, edge cases, and pitfalls before they reach production.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-semibold mb-2">Performance insights</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Identify hotspots and get suggestions that actually move the needle.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-semibold mb-2">Consistent style</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Enforce conventions across repos with clear, lint-friendly guidance.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-semibold mb-2">Secure by design</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Flag unsafe patterns and dependencies for a safer codebase.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-semibold mb-2">Actionable commits</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Get ready-to-apply diffs you can review and merge in minutes.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <h3 class="font-semibold mb-2">Works with your flow</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Use it ad-hoc or in sprints — solo or with your whole team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="mt-16">
+        <h2 class="text-2xl font-bold text-center mb-8">How it works</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <div class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Step 1</div>
+            <h3 class="font-semibold mb-2">Choose a plan</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Pick Starter, Developer, Pro, or Enterprise to match your needs.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <div class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Step 2</div>
+            <h3 class="font-semibold mb-2">Submit your code</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Connect a repo or upload files. We run AI + human review.
+            </p>
+          </div>
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+            <div class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Step 3</div>
+            <h3 class="font-semibold mb-2">Apply the fixes</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">
+              Get clear feedback and commit-ready diffs you can merge quickly.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="/pricing.html" class="btn primary">Get Started</a>
+        </div>
+      </section>
+
+      <!-- Testimonials tease -->
+      <section class="mt-16">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-700 p-8 text-center">
+          <h2 class="text-2xl font-bold">Loved by developers</h2>
+          <p class="mt-2 text-slate-600 dark:text-slate-400">
+            See how Codalyze fits real teams and solo projects.
+          </p>
+
+          <!-- Testimonials illustration  -->
+          <div class="mt-6 flex justify-center">
+            <img
+              src="/assets/undraw_code-review_jdgp.svg"
+              alt="Developers collaborating in a code review"
+              class="w-full max-w-md h-auto"
+            />
+          </div>
+
+          <a href="/testimonials.html" class="mt-6 inline-block btn">Read Testimonials</a>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="mt-16">
+        <div class="rounded-2xl p-8 bg-indigo-600 text-white text-center">
+          <h2 class="text-2xl font-semibold">Ready to try Codalyze?</h2>
+          <p class="mt-2 opacity-90">Start on the free tier and upgrade when you’re ready.</p>
+          <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="/pricing.html" class="btn primary">View Plans</a>
+            <a href="/contact.html" class="btn">Contact Us</a>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="mt-16 border-t border-slate-200 dark:border-slate-800">
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm flex flex-col gap-3 md:flex-row md:items-center md:justify-between"
-      >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div>&copy; <span id="year"></span> Codalyze</div>
         <div class="flex flex-wrap gap-4">
-          <a class="nav-link" href="pricing.html">Subscribe</a>
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="/pricing.html">Subscribe</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
         </div>
       </div>
     </footer>
 
-    <script src="scripts/scripts.js"></script>
+    <script src="/scripts/scripts.js"></script>
   </body>
 </html>

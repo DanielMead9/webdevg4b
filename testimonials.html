@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class", theme: { extend: {} } };
+    </script>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <!-- Standard .ico favicon for broader compatibility-->
+    <link rel="icon" href="/favicon.ico" />
+    <!-- SVG favicon for modern browsers -->
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+
+    <title>Codalyze — Testimonials</title>
+  </head>
+
+  <body
+    class="min-h-screen bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors"
+  >
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:ring rounded bg-white dark:bg-slate-800"
+      >Skip to content</a
+    >
+
+    <header
+      class="sticky top-0 z-40 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="h-14 flex items-center justify-between">
+          <a
+            href="/index.html"
+            class="flex items-center gap-2 font-semibold tracking-wide"
+          >
+            <img src="/assets/icon.svg" alt="Codalyze logo" class="h-7 w-7" />
+            <span>Codalyze</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+            <a class="nav-link" href="/index.html">Home</a>
+            <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="/pricing.html">Pricing</a>
+            <a class="nav-link" href="/testimonials.html">Testimonials</a>
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </nav>
+
+          <div class="hidden md:flex items-center gap-2">
+            <button
+              id="decrease-font"
+              class="icon-btn"
+              title="Decrease font size"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <button
+              id="increase-font"
+              class="icon-btn"
+              title="Increase font size"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+            <button
+              id="theme-toggle"
+              class="icon-btn"
+              title="Toggle dark mode"
+              aria-pressed="false"
+              aria-label="Toggle dark mode"
+            >
+              <span id="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+          </div>
+          <button
+            id="menu-toggle"
+            class="md:hidden icon-btn"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-200 dark:border-slate-800"
+      >
+        <nav class="px-4 py-3 grid grid-cols-2 gap-2 text-sm">
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/pricing.html">Pricing</a>
+          <a class="nav-link" href="/testimonials.html">Testimonials</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <!-- Title Section -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h1 class="text-3xl font-bold mb-4">What Developers Say</h1>
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Codalyze is built by developers, for developers — and our community
+          says it best.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+        >
+          <p class="text-slate-700 dark:text-slate-300 italic mb-4">
+            “Codalyze caught a performance issue in my API that I completely
+            missed. The suggestions were clear and actually taught me something
+            — it felt like pair programming with a senior engineer.”
+          </p>
+          <h3 class="font-semibold">Alex Rivera</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Freelance Full-Stack Developer
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+        >
+          <p class="text-slate-700 dark:text-slate-300 italic mb-4">
+            “We use Codalyze for weekly sprint reviews. It helps us keep a
+            consistent coding style across our team, and the commit suggestions
+            save us hours every week.”
+          </p>
+          <h3 class="font-semibold">Sierra Thompson</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Engineering Manager, SyncForge
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+        >
+          <p class="text-slate-700 dark:text-slate-300 italic mb-4">
+            “As a CS instructor, Codalyze has been a huge help for grading
+            student projects. It flags common mistakes instantly and gives real
+            explanations students can learn from.”
+          </p>
+          <h3 class="font-semibold">Dr. Priya Raman</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Computer Science Lecturer
+          </p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+        >
+          <p class="text-slate-700 dark:text-slate-300 italic mb-4">
+            “The AI rewrite suggestions were shockingly accurate. It helped us
+            refactor an old legacy component that none of us wanted to touch.”
+          </p>
+          <h3 class="font-semibold">Jordan Mitchell</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Software Engineer, Nimbus Apps
+          </p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+        >
+          <p class="text-slate-700 dark:text-slate-300 italic mb-4">
+            “I signed up for the basic plan, and within a week it became part of
+            my workflow. Codalyze basically pays for itself in the bugs it
+            catches.”
+          </p>
+          <h3 class="font-semibold">Kevin Liu</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Independent Game Developer
+          </p>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm"
+        >
+          <p class="text-slate-700 dark:text-slate-300 italic mb-4">
+            “We integrated Codalyze with our GitHub repos and haven't looked
+            back. The automated commit suggestions alone make it a must-have.”
+          </p>
+          <h3 class="font-semibold">Emily Carter</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Co-Founder, ByteBrew
+          </p>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-16">
+        <h2 class="text-xl font-semibold mb-2">Ready to Join Them?</h2>
+        <p class="text-slate-600 dark:text-slate-400">
+          Start improving your code today with Codalyze.
+        </p>
+        <a
+          href="/pricing.html"
+          class="inline-block mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+        >
+          View Plans
+        </a>
+      </div>
+    </main>
+
+    <footer
+      class="mt-16 border-t border-slate-200 dark:border-slate-800 text-sm"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col gap-3 md:flex-row md:items-center md:justify-between"
+      >
+        <div>&copy; <span id="year"></span> Codalyze</div>
+        <div class="flex flex-wrap gap-4">
+          <a class="nav-link" href="/pricing.html">Subscribe</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/scripts/scripts.js"></script>
+  </body>
+</html>

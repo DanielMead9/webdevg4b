@@ -8,7 +8,7 @@
     <script>
       tailwind.config = { darkMode: "class", theme: { extend: {} } };
     </script>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <!-- Standard .ico favicon for broader compatibility-->
     <link rel="icon" href="/favicon.ico" />
     <!-- SVG favicon for modern browsers -->
@@ -31,17 +31,18 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="h-14 flex items-center justify-between">
           <a
-            href="index.html"
+            href="/index.html"
             class="flex items-center gap-2 font-semibold tracking-wide"
           >
-            <img src="assets/logo.svg" alt="" class="h-7 w-7" />
+            <img src="/assets/icon.svg" alt="Codalyze logo" class="h-7 w-7" />
             <span>Codalyze</span>
           </a>
           <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="pricing.html">Pricing</a>
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="/index.html">Home</a>
+            <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="/pricing.html">Pricing</a>
+            <a class="nav-link" href="/testimonials.html">Testimonials</a>
+            <a class="nav-link" href="/contact.html">Contact</a>
 
           </nav>
           <div class="hidden md:flex items-center gap-2">
@@ -90,10 +91,11 @@
           class="px-4 py-3 grid grid-cols-2 gap-2 text-sm"
           aria-label="Mobile"
         >
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="pricing.html">Pricing</a>
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="/index.html">Home</a>
+          <a class="nav-link" href="/about.html">About</a>
+          <a class="nav-link" href="/pricing.html">Pricing</a>
+          <a class="nav-link" href="/testimonials.html">Testimonials</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
         </nav>
         <div class="px-4 pb-4 flex items-center gap-2">
           <button
@@ -153,7 +155,7 @@
           <img
             src="/assets/undraw_code-review_jdgp.svg"
             alt="Team collaborating on code review"
-            class="rounded-xl shadow-md max-h-64 w-auto mx-auto"
+            class="rounded-xl max-h-64 w-auto mx-auto"
           />
         </div>
 
@@ -162,7 +164,7 @@
           <img
             src="/assets/undraw_ai-agent_pdkp.svg"
             alt="AI reviewing code"
-            class="rounded-xl shadow-md order-2 md:order-1 max-h-64 w-auto mx-auto"
+            class="rounded-xl order-2 md:order-1 max-h-64 w-auto mx-auto"
           />
           <div class="order-1 md:order-2">
             <h2 class="text-2xl font-semibold mb-3">What We Do</h2>
@@ -213,10 +215,9 @@
         <div class="text-center max-w-4xl mx-auto mt-10">
           <h2 class="text-2xl font-semibold mb-4">Meet the Team</h2>
 
-          <!-- TODO: Insert team photo -->
           <div class="flex justify-center mb-10">
             <img
-              src="/assets/team_photo_placeholder.png"
+              src="TeamPhoto.jpeg"
               alt="Codalyze Team Photo"
               class="rounded-xl border border-slate-200 dark:border-slate-700 shadow-md max-w-[80%] h-auto"
             />
@@ -224,19 +225,6 @@
 
           <!-- Team Member Cards -->
           <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div
-              class="p-6 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:shadow-md transition"
-            >
-              <h3 class="text-lg font-semibold">Daniel Mead</h3>
-              <p class="text-indigo-600 dark:text-indigo-400 font-medium">
-                Chief Everything Officer
-              </p>
-              <p class="text-slate-700 dark:text-slate-300 mt-2">
-                Oversees all aspects of Codalyze — from architecture design to
-                product vision. Passionate about building tools that empower
-                developers to write better code.
-              </p>
-            </div>
 
             <div
               class="p-6 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:shadow-md transition"
@@ -265,6 +253,20 @@
                 developer-friendly.
               </p>
             </div>
+
+            <div
+              class="p-6 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:shadow-md transition"
+            >
+              <h3 class="text-lg font-semibold">Daniel Mead</h3>
+              <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                Chief Everything Officer
+              </p>
+              <p class="text-slate-700 dark:text-slate-300 mt-2">
+                Oversees all aspects of Codalyze — from architecture design to
+                product vision. Passionate about building tools that empower
+                developers to write better code.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -277,7 +279,7 @@
             Join us in redefining how developers write, review, and refine code.
           </p>
           <a
-            href="pricing.html"
+            href="/pricing.html"
             class="inline-block mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
           >
             Get Started
@@ -292,12 +294,12 @@
       >
         <div>&copy; <span id="year"></span> Codalyze</div>
         <div class="flex flex-wrap gap-4">
-          <a class="nav-link" href="pricing.html">Subscribe</a>
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="/pricing.html">Subscribe</a>
+          <a class="nav-link" href="/contact.html">Contact</a>
         </div>
       </div>
     </footer>
 
-    <script src="scripts/scripts.js"></script>
+    <script src="/scripts/scripts.js"></script>
   </body>
 </html>
